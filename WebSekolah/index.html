@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 1 Percut Sei Tuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease forwards;
+        }
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            display: none;
+            cursor: pointer;
+        }
+        .nav-bg {
+            transition: background 0.3s ease;
+        }
+        .scroll .nav-bg {
+            background: rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header and Navigation -->
+    <header class="nav-bg fixed w-full z-50 top-0 bg-transparent">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/kemendikbud-.jpg" alt="Logo Kemendikbud Tut Wuri Handayani" class="mr-3 rounded-full w-12 h-12 object-cover" />
+
+                <h1 class="text-2xl font-bold text-black">SMK Negeri 1 Percut Sei Tuan</h1>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#beranda" class="nav-link text-black hover:text-blue-300 transition-colors">Beranda</a></li>
+                <li><a href="#tentang" class="nav-link text-black hover:text-blue-300 transition-colors">Tentang Kami</a></li>
+                <li><a href="#program" class="nav-link text-black hover:text-blue-300 transition-colors">Program</a></li>
+                <li><a href="#fasilitas" class="nav-link text-black hover:text-blue-300 transition-colors">Fasilitas</a></li>
+                <li><a href="#Organisasi" class="nav-link text-black hover:text-blue-300 transition-colors">Organisasi</a></li>
+                <li><a href="#ekstrakurikuler" class="nav-link text-black hover:text-blue-300 transition-colors">Exstrakurikuler</a></li>
+                <li><a href="#kontak" class="nav-link text-black hover:text-blue-300 transition-colors">Kontak</a></li>
+            </ul>
+            <button class="md:hidden text-white" id="menu-toggle">☰</button>
+        </nav>
+        <ul class="md:hidden bg-black bg-opacity-90 text-white absolute w-full left-0 top-full hidden" id="mobile-menu">
+            <li><a href="#beranda" class="block py-2 px-6">Beranda</a></li>
+            <li><a href="#tentang" class="block py-2 px-6">Tentang Kami</a></li>
+            <li><a href="#program" class="block py-2 px-6">Program</a></li>
+            <li><a href="#fasilitas" class="block py-2 px-6">Fasilitas</a></li>
+            <li><a href="#Organisasi" class="block py-2 px-6">Organisasi</a></li>
+            <li><a href="#ekstrakurikuler" class="block py-2 px-6">Ekstrakurikuler</a></li>
+            <li><a href="#kontak" class="block py-2 px-6">Kontak</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-section text-white text-center">
+    <div class="max-w-4xl mx-auto px-6 animate-on-scroll pt-20">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            Selamat Datang di SMK Negeri 1 Percut Sei Tuan
+        </h2>
+
+            <p class="text-xl md:text-2xl mb-10 opacity-90">
+                Membentuk Generasi Unggul Melalui Pendidikan Keahlian
+            </p>
+            <img src="img/smk1.jpg" alt="Tampak depan SMK Negeri 1 Percut Sei Tuan dengan gedung utama, pepohonan, dan halaman sekolah" class="w-full max-w-4xl h-auto rounded-xl shadow-2xl hover-effect mb-8" />
+
+            <div class="mt-8">
+                <a href="#tentang" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all shadow-lg">
+                    Jelajahi Sekolah Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Tentang Kami</h3>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    SMK Negeri 1 Percut Sei Tuan adalah institusi pendidikan kejuruan terkemuka di Kabupaten Deli Serdang, 
+                    yang berkomitmen untuk menghasilkan lulusan berdaya saing tinggi melalui pendidikan yang berbasis keterampilan praktis dan nilai-nilai moral.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="animate-on-scroll bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-xl hover-effect shadow-xl">
+                    <img src="img/kepsek.jpg" alt="Formal portrait of Bapak Daulat Siregar, M.Pd., M.Si, the principal of SMK Negeri 1 Percut Sei Tuan, wearing a suit with a warm smile and professional demeanor" class="mx-auto mb-6 rounded-lg shadow-lg" />
+                    <h4 class="text-3xl font-semibold mb-4">Kepala Sekolah</h4>
+                    <h5 class="text-2xl font-medium mb-4">Bapak Daulat Siregar, M.Pd., M.Si.</h5>
+                    <p class="leading-relaxed">
+                        Sebagai PLT Kepala SMK Negeri 1 Percut Sei Tuan, Bapak Daulat Siregar berkomitmen untuk meningkatkan kualitas pendidikan kejuruan dan mempersiapkan siswa agar siap bersaing di dunia kerja. Beliau memimpin berbagai kegiatan sekolah dengan dedikasi tinggi, termasuk pengembangan program keahlian dan fasilitas pendidikan modern.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-1 gap-8">
+                    <div class="animate-on-scroll bg-gradient-to-r from-blue-500 to-purple-600 text-white p-8 rounded-xl hover-effect shadow-xl">
+                        <h4 class="text-2xl font-semibold mb-4">VISI</h4>
+                        <p class="leading-relaxed">
+                            SMK Negeri 1 Percut Sei Tuan berkomitmen menyelenggarakan pendidikan dan pelatihan untuk menghasilkan SDM yang menguasai IPTEK, berakhlak mulia, berwawasan lingkungan, dan mampu bersaing di pasar kerja global.
+                        </p>
+                    </div>
+                    <div class="animate-on-scroll bg-gradient-to-r from-green-500 to-teal-600 text-white p-8 rounded-xl hover-effect shadow-xl">
+                        <h4 class="text-2xl font-semibold mb-4">MISI</h4>
+                        <ul class="leading-relaxed space-y-2">
+                            <li>• Menyiapkan lulusan yang kompeten sesuai kebutuhan dunia kerja.</li>
+                            <li>• Menguasai bahasa Inggris (TOEIC > 300).</li>
+                            <li>• Membentuk karakter disiplin, jujur, setia, patuh, beretos kerja baik, dan berjiwa wirausaha.</li>
+                            <li>• Membekali siswa menjadi warga negara produktif, kreatif, inovatif, serta adaptif.</li>
+                            <li>• Memberikan sertifikasi kompetensi berstandar nasional dan industri.</li>
+                            <li>• Meningkatkan kualitas guru, tenaga kependidikan, dan kerja sama dengan dunia usaha/industri.</li>
+                            <li>• Menumbuhkan budaya kerja, kebersihan, lingkungan hijau, serta keterampilan kewirausahaan.</li>
+                            <li>• Mendorong prestasi akademik dan non-akademik di tingkat daerah, nasional, dan internasional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="animate-on-scroll bg-gradient-to-r from-orange-500 to-red-600 text-white p-8 rounded-xl hover-effect shadow-xl max-w-2xl mx-auto">
+                <h4 class="text-3xl font-semibold mb-4 text-center">Tujuan</h4>
+                <p class="leading-relaxed text-center">
+                    Siswa lulusan SMK Negeri 1 Percut Sei Tuan siap berkontribusi di dunia kerja melalui pengetahuan dan keterampilan yang mereka dapatkan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="program" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Program Keahlian</h3>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Sekolah kami menawarkan berbagai program keahlian yang disusun berdasarkan kebutuhan industri modern, mempersiapkan siswa untuk karir sukses di berbagai bidang.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                  <img src="img/bkp.jpg" alt="Bisnis Konstruksi dan Properti" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Bisnis Konstruksi dan Properti</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Pelajari manajemen konstruksi, pemasaran properti, dan analisis pasar untuk karir di industri konstruksi dan real estate.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Konstruksi</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Properti</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/dpib.jpg" alt="Desain Permodelan dan Informasi Bangunan" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Desain Permodelan dan Informasi Bangunan</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Kembangkan keterampilan desain bangunan, permodelan 3D, dan informasi teknis konstruksi menggunakan software modern.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Desain</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Bangunan</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/geosapal.jpg" alt="Teknik Geospasial" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600"> Teknik Geospasial</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Belajar pengukuran tanah, pemetaan digital, dan teknologi geospatial untuk aplikasi di bidang geografis dan perencanaan.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Pemetaan</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Geospasial</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/tjtl.jpg" alt="Teknik Jaringan Tenaga Listrik" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Jaringan Tenaga Listrik</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Pelajari instalasi dan pemeliharaan jaringan tenaga listrik untuk distribusi daya yang efisien dan aman.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Listrik</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Jaringan</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/titl1.jpg" alt="Teknik Instalasi Tenaga Listrik" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Instalasi Tenaga Listrik</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Fokus pada pemasangan instalasi listrik rumah tangga, industri, dan komersial sesuai standar keselamatan.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Instalasi</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Listrik</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/tptu.jpg" alt="Teknik Pendingin dan Tata Udara" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Pendingin dan Tata Udara</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Belajar instalasi dan perawatan sistem pendinginan udara, AC, dan sistem ventilasi untuk kenyamanan indoor.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Pendingin</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Tata Udara</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                   <img src="img/t.mesin.jpg" alt="Teknik Pemesinan" class="rounded-x1 shadow-lg">
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Pemesinan</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Kuasai teknik manufaktur, pemesinan presisi, dan CNC untuk produksi komponen logam berkualitas tinggi.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Pemesinan</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Manufaktur</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/pengelasan.jpg" alt="Teknik Pengelasan" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Pengelasan</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Belajar berbagai teknik pengelasan untuk konstruksi, perbaikan, dan fabrikasi metal dengan standar keamanan.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Pengelasan</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Konstruksi</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                     <img src="img/tkr.jpg" alt="Teknik Kendaraan Ringan Otomotif" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Kendaraan Ringan Otomotif</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Pelajari perawatan, perbaikan, dan diagnostik kendaraan bermotor ringan untuk karir di dunia otomotif.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Otomotif</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Perbaikan</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/tsm.jpg" alt="Teknik dan Bisnis Sepeda Motor" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik dan Bisnis Sepeda Motor</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Gabungan teknik perbaikan motor dan strategi bisnis untuk manajemen showroom dan layanan sepeda motor.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Sepeda Motor</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Bisnis</span>
+                    </div>
+                </div>
+                
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/rpl.jpg" alt="Rekayasa Perangkat Lunak dan Gim" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Rekayasa Perangkat Lunak dan Gim</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Belajar pemrograman, pengembangan aplikasi, dan analisis sistem untuk menjadi developer handal.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Software</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Pemrograman</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                    <img src="img/tkj.jpg" alt="Teknik Komputer dan Jaringan" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Komputer dan Jaringan</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Pelajari dasar-dasar jaringan komputer, programming, database management, dan teknologi informasi terkini untuk dunia digital.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Networking</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">IT</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg">
+                   <img src="img/psptv.jpg" alt="Produksi Siaran dan Program Televisi" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Produksi Siaran dan Program Televisi</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Kuasai teknik produksi program televisi, broadcasting, dan manajemen media untuk industri penyiaran.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Televisi</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Siaran</span>
+                    </div>
+                </div>
+                <div class="animate-on-scroll bg-white p-6 rounded-xl hover-effect shadow-lg"> 
+                    <img src="img/tei.jpg" alt="Teknik Elektronika Industri" class="w-full h-40 object-cover rounded-lg mb-4" />
+                    <h4 class="text-xl font-semibold mb-2 text-blue-600">Teknik Elektronika Industri</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Pelajari dasar-dasar elektronika, sistem kendali, perakitan, dan pemeliharaan peralatan industri modern untuk mendukung dunia manufaktur dan otomasi.
+                    </p>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Elektronika</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Industri</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Otomasi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="fasilitas" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Fasilitas Sekolah</h3>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+        <!-- Card Ruang Guru -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/ruang-guru.jpeg" alt="Kelas Modern" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Ruang Guru</h4>
+        <p class="text-gray-600 leading-relaxed text-sm">Tempat para guru berkumpul, berdiskusi, dan mempersiapkan pembelajaran.</p>
+      </div>
+
+      <!-- Card Kelas Modern -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/kelas.jpg" alt="Kelas Modern" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Kelas Modern</h4>
+        <p class="text-gray-600 leading-relaxed text-sm">Ruang kelas dilengkapi fasilitas teknologi terdepan untuk pembelajaran interaktif.</p>
+      </div>
+
+        <!-- Card ICT Center -->
+        <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+            <img src="img/ict-center.jpeg" alt="Kelas Modern" class="w-full h-40 object-cover rounded-lg mb-4" />
+            <h4 class="text-xl font-semibold mb-2">ICT Center</h4>
+            <p class="text-gray-600 leading-relaxed text-sm">Pusat teknologi informasi untuk mendukung kegiatan belajar berbasis komputer.</p>
+        </div>
+
+      <!-- Card Laboratorium Komputer -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/ruangleb.jpeg" alt="Laboratorium Komputer" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Laboratorium Komputer</h4>
+        <p class="text-gray-600 leading-relaxed text-sm">Lab komputer tercanggih untuk latihan pemrograman dan networking.</p>
+      </div>
+
+      <!-- Card Lapangan Upacara -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/lapangan-upacara.jpeg" alt="Lapangan Olahraga" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Lapangan</h4>
+        <p class="text-gray-600 leading-relaxed text-sm">Area utama untuk pelaksanaan upacara bendera dan kegiatan resmi sekolah.</p>
+      </div>
+
+
+      <!-- Card Perpustakaan -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/perpustakaan1.jpeg" alt="Perpustakaan" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Perpustakaan</h4>
+        <p class="text-gray-600 leading-relaxed text-sm">Koleksi buku dan referensi yang komprehensif untuk penelitian dan pembelajaran.</p>
+      </div>
+
+    <!-- Card Masjid -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/masjid.jpg" alt="Masjid Al-Ikhwan" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Masjid Al-Ikhwan</h4>
+        <p class="text-gray-600 leading-relaxed text-sm"> Tempat ibadah yang nyaman dan luas untuk kegiatan keagamaan siswa, guru, dan seluruh warga sekolah.</p>
+      </div>
+
+      <!-- Card Aula -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/aula.jpeg" alt="Aula SMK N 1 Percut Sei Tuan" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Aula 1 SMK N 1 Percut Sei Tuan </h4>
+        <p class="text-gray-600 leading-relaxed text-sm"> Ruang serbaguna yang digunakan untuk acara sekolah, seminar, pertemuan, dan kegiatan ekstrakurikuler.</p>
+      </div>
+
+      <!-- Card Aula -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/aula2.jpeg" alt="Aula SMK N 1 Percut Sei Tuan" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Aula 2 SMK N 1 Percut Sei Tuan </h4>
+        <p class="text-gray-600 leading-relaxed text-sm"> Digunakan untuk acara besar sekolah, seminar, dan kegiatan siswa.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+           
+   <!-- Organisasi Section -->
+    <section id="Organisasi" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Organisasi Sekolah</h3>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+        <!-- OSIS -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/osis.png" alt="OSIS" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">OSIS</h4>
+        <p class="text-gray-600">Wadah pengembangan kepemimpinan, kreativitas, dan tanggung jawab siswa.</p>
+      </div>
+
+      <!-- MPK -->
+      <div class="animate-on-scroll bg-gray-100 p-6 rounded-xl hover-effect shadow-lg">
+        <img src="img/mpk.jpg" alt="MPK" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">MPK</h4>
+        <p class="text-gray-600">Majelis Perwakilan Kelas sebagai organisasi legislatif siswa yang mendukung OSIS.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+        
+            <!-- Ekstrakurikuler -->
+        <section id="ekstrakurikuler" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-10">Ekstrakurikuler</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+         <!-- Futsal -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/futsal.jpg" alt="Futsal" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Futsal</h4>
+        <p class="text-gray-600">Mengembangkan bakat olahraga di bidang futsal sekaligus melatih kekompakan tim.</p>
+      </div>
+
+      <!-- Pramuka -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/pramuka.jpg" alt="Pramuka" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Pramuka</h4>
+        <p class="text-gray-600">Melatih kemandirian, kedisiplinan, serta kepemimpinan melalui kegiatan kepanduan.</p>
+      </div>
+
+      <!-- PMR -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/pmr.jpg" alt="PMR" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">PMR</h4>
+        <p class="text-gray-600">Palang Merah Remaja yang aktif dalam kegiatan sosial dan pertolongan pertama.</p>
+      </div>
+
+      <!-- Basket -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/basket.jpg" alt="Basket" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Basket</h4>
+        <p class="text-gray-600">Wadah bagi siswa yang hobi olahraga basket serta pengembangan prestasi olahraga.</p>
+      </div>
+
+      <!-- Tari -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/nari.jpg" alt="Tari" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Seni Tari</h4>
+        <p class="text-gray-600">Mengasah bakat seni di bidang tari tradisional maupun modern.</p>
+      </div>
+
+      <!-- Teater -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/teater.jpg" alt="Teater" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Teater</h4>
+        <p class="text-gray-600">Mengekspresikan seni peran sekaligus melatih kepercayaan diri di atas panggung.</p>
+      </div>
+
+      <!-- Paskibra -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/paskibra.jpg" alt="Paskibra" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Paskibra</h4>
+        <p class="text-gray-600">Mengembangkan disiplin, nasionalisme, serta kebanggaan dalam baris-berbaris.</p>
+      </div>
+
+      <!-- Tarung Derajat -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/td.jpg" alt="Tarung Derajat" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Tarung Derajat</h4>
+        <p class="text-gray-600">Beladiri khas Indonesia yang melatih fisik, mental, dan sportivitas.</p>
+      </div>
+
+       <!-- Rohis -->
+      <div class="animate-on-scroll bg-white p-6 rounded-xl shadow-lg hover-effect">
+        <img src="img/rohis.jpg" alt="Rohistu Al-Ikhwan" class="w-full h-40 object-cover rounded-lg mb-4" />
+        <h4 class="text-xl font-semibold mb-2">Rohistu Al-Ikhwan</h4>
+        <p class="text-gray-600">Ekstrakurikuler keagamaan Islam yang membina keimanan, ukhuwah, dan kegiatan dakwah siswa.</p>
+      </div>
+
+    
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+    <section id="kontak" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold mb-6">Kontak Kami</h3>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                  <div class="map-container" style="margin-top:20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.9413130603566!2d98.71814087497322!3d3.600917496373211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303130f87eda05ef%3A0x36c82e54c5abdd9b!2sSMK%20Negeri%201%20Percut%20Sei%20Tuan!5e0!3m2!1sid!2sid!4v1757183166271!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        
+                    </div>
+                </div>
+
+
+      <!-- Contact Info -->
+      <div>
+        <p class="mb-4">
+          <strong>Alamat:</strong> Jl. Kolam No. 3, Medan Estate, Percut Sei Tuan, 
+          Deli Serdang, Sumatera Utara
+        </p>
+        
+
+        <!-- Telepon -->
+        <p class="flex items-center gap-3 mb-3">
+        <a href="tel:0617357932" class="flex items-center gap-2 hover:text-green-400">
+            <i class="fas fa-phone-alt text-green-500 text-xl"></i>
+            (061) 7357932
+        </a>
+        </p>
+
+        <!-- Email -->
+        <p class="flex items-center gap-3 mb-3">
+          <a href="mailto:smkn1.percutseituan@gmail.com" target="_blank" class="flex items-center gap-2 hover:text-blue-400">
+            <i class="fas fa-envelope text-red-500 text-xl"></i>
+            smkn1.percutseituan@gmail.com
+          </a>
+        </p>
+
+        <!-- Instagram -->
+            <p class="flex items-center gap-3 mb-3">
+            <a href="https://www.instagram.com/smknegeri1_percutseituan/" target="_blank" 
+                class="flex items-center gap-2 hover:text-pink-400">
+                <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                smknegeri1_percutseituan
+            </a>
+            </p>
+
+
+
+        <!-- YouTube -->
+        <p class="flex items-center gap-3 mb-3">
+          <a href="https://youtube.com/@smknegeri1percutseituan63?si=CAhndfL0cUHm8OIj" target="_blank" class="flex items-center gap-2 hover:text-red-500">
+            <i class="fab fa-youtube text-red-600 text-xl"></i>
+            @smknegeri1percutseituan63
+          </a>
+        </p>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tambahkan Font Awesome di dalam <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+       
+
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">&copy; 2025 SMK Negeri 1 Percut Sei Tuan. Semua hak cipta dilindungi.</p>
+            
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollBtn" onclick="scrollToTop()">^</div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                document.getElementById('scrollBtn').style.display = 'block';
+            } else {
+                document.getElementById('scrollBtn').style.display = 'none';
+            }
+        });
+
+        // Animate on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        });
+        document.querySelectorAll('.animate-on-scroll').forEach(item => observer.observe(item));
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav-bg');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('scroll');
+            } else {
+                nav.classList.remove('scroll');
+            }
+        });
+    </script>
+</body>
+</html>
+</content>
+</create_file>           
+
